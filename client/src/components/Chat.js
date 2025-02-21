@@ -12,7 +12,7 @@ const Chat = () => {
   const { user } = useUser();
 
   useEffect(() => {
-    axios.get('https://chatapp-3ew6.onrender.com/api/messages');
+    axios.get('https://chatapp-3ew6.onrender.com/api/messages')
     .then(res => setMessages(res.data))
       .catch(err => console.error(err));
 
