@@ -3,8 +3,10 @@ import axios from 'axios';
 import io from 'socket.io-client';
 import { useUser } from '../contexts/UserContext';
 
-const socket = io('https://chatapp-3ew6.onrender.com');
 
+const socket = io('https://chatapp-3ew6.onrender.com', {
+    transports: ['websocket'], // Use WebSocket only
+  });
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
