@@ -3,7 +3,9 @@ import axios from 'axios';
 import io from 'socket.io-client';
 import { useUser } from '../contexts/UserContext';
 
-const socket = io('http://localhost:5000');
+const socket = io('https://chatapp-3ew6.onrender.com');
+axios.get('https://chatapp-3ew6.onrender.com/api/messages');
+
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
