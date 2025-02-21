@@ -4,7 +4,6 @@ import io from 'socket.io-client';
 import { useUser } from '../contexts/UserContext';
 
 const socket = io('https://chatapp-3ew6.onrender.com');
-axios.get('https://chatapp-3ew6.onrender.com/api/messages');
 
 
 const Chat = () => {
@@ -13,8 +12,8 @@ const Chat = () => {
   const { user } = useUser();
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/messages')
-      .then(res => setMessages(res.data))
+    axios.get('https://chatapp-3ew6.onrender.com/api/messages');
+    .then(res => setMessages(res.data))
       .catch(err => console.error(err));
 
     socket.on('newMessage', (message) => {
