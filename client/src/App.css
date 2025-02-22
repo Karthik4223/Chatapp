@@ -72,7 +72,7 @@ body {
 .chat-page {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Full screen height */
+  height: 60vh; /* Full screen height */
   max-width: 1200px;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.05);
